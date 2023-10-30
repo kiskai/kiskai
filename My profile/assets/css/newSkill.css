@@ -1,0 +1,66 @@
+#mySkills{
+    background-color: #9E9DC2;
+}
+div.polaroid {
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px  #504E92;
+  animation: zoomIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s; /* Add a smooth transition for the transform property */
+}
+
+div.polaroid:hover {
+  transform: scale(1.1); /* Scale up when hovering over the polaroid */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+div.rotate_right {
+  float: left;
+  transform: rotate(7deg);
+}
+
+div.rotate_left {
+  float: left;
+  transform: rotate(-8deg);
+}
+
+div.rotate_right2 {
+  float: left;
+  transform: rotate(8deg);
+}
+
+div.rotate_left2 {
+  float: left;
+  transform: rotate(-8deg);
+}
+
+.rotate-container {
+  display: block;
+  align-items: center;
+}
+p{
+    text-align: justify;
+    padding: 0 20px 0 20px;
+}
+.container-center{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-caption{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 40px 0;
+}

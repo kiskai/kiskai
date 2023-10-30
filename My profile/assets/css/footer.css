@@ -1,0 +1,76 @@
+ .footer-container-flex {
+            display: flex;
+            flex-direction: column; /* Adjust the flex direction to make it vertical */
+            position: relative; /* Add relative positioning to create a context for absolute positioning */
+            background-color: #D0CFE1; /* Set the background color */
+        }
+
+        .social1-content-flex,
+        .additional-contents {
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        .social1-content-flex {
+            padding: 20px 20px 5px 5%;
+        }
+        .additional-contents{
+            padding: 5px 20px 5px 5%;
+        }
+
+        .social1-content-flex a,
+        .additional-contents a {
+            text-decoration: none;
+            color: #888; /* Gray color for icons and labels */
+            display: flex;
+            align-items: center;
+            margin-right: 10px; /* Adjust the spacing between icon and label */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+
+        .social1-content-flex ion-icon,
+        .additional-contents ion-icon {
+            font-size: 24px; /* Adjust the icon size as needed */
+            padding: 0 10px 0 0;
+        }
+
+        .social1-content-flex label,
+        .additional-contents label {
+            margin: 0; /* Remove default margin */
+            font-size: 14px; /* Adjust the label font size as needed */
+            width: 150px; /* Set a fixed width for the labels */
+        }
+
+        .back-to-top {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+        }
+
+        .back-to-top a {
+            text-decoration: underline; /* Add underline text decoration */
+            color: #333; /* Adjust the color as needed */
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+
+        .back-to-top ion-icon {
+            font-size: 24px; /* Adjust the icon size as needed */
+        }
+
+        /* Add hover styles */
+        .social1-content-flex a:hover,
+        .additional-contents a:hover,
+        .back-to-top a:hover {
+            color: #3d3b86; /* Change the color on hover */
+        }
+        .footer-title{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 20px 0 5%;
+            font-size: 24px;
+            text-decoration: underline;
+        }

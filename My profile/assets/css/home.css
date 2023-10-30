@@ -1,0 +1,185 @@
+
+* {
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Reset some default styles for cleaner look */
+body, ul {
+	margin: 0;
+	padding: 0;
+
+}
+
+@keyframes zoomIn {
+	from {
+		transform: scale(0.8); /* Start with 80% zoom */
+		opacity: 0; /* Start with 0 opacity (completely transparent) */
+	}
+	to {
+		transform: scale(1); /* End with normal size */
+		opacity: 1; /* End with full opacity (completely visible) */
+	}
+}
+
+.container div {
+	animation: zoomIn 1s ease; /* Apply zoom-in animation to all divs inside .main-container */
+}
+#home{
+	background-color: #9E9DC2;
+}
+/* Styles for the header */
+	.sticky-header {
+			position: sticky;
+			top: 0;
+			background-color: #D0CFE1;
+			padding: 20px;
+			z-index: 100;
+		}
+
+/* Styles for the navigation buttons */
+.nav-btn {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end; /* Aligns items to the right */
+}
+
+.nav-btn li {
+	margin-left: 10px; /* Add some space between buttons */
+}
+
+.nav-btn li a {
+	text-decoration: none;
+	color: #000;
+	padding: 8px 16px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn li a:hover {
+	color: #3d3b86;
+}
+
+ .navlinks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        gap: 20px;
+}
+.icons ion-icon {
+        color: gray;
+        transition: color 0.3s;
+        font-size: 20px;
+    }
+ .icons ion-icon:hover {
+        color: #3d3b86;
+    }
+
+
+.main-container {
+	display: flex;
+	align-items: center;
+	padding: 0 15% 0 15%;
+}
+
+.profile-container {
+	border-radius: 50%; /* Make the image circular */
+	object-fit: cover; /* Maintain the aspect ratio */
+	width: 35%; 
+	height: 35%; 
+	box-shadow: 10px 10px 5px  #504E92;
+	margin-right: 50px;
+}
+
+/* Move the image to the left */
+.profile-container {
+	order: 1;
+	
+}
+
+/* Center the texts on the right */
+.name-container,
+.sub-text-contain {
+	order: 2;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Adjust spacing between image and text containers */
+.main-container {
+	gap: 20px;
+}
+h1{
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+h2{
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+.userName{
+	font-size: 40px;
+	color: #3d3b86;
+}
+.skills-shortcuts{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 10px;
+
+}
+.skills-img{
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	margin-right: 10px;
+	border-radius: 100%;
+	box-shadow: 10px 10px 5px  #504E92;
+
+}
+.skills-img:hover{
+	width: 45px;
+	height: 45px;
+	transition: width 0.3s, height 0.3s;
+}
+.hireme-btn{
+	border: none;
+	border-radius: 8px;
+	background-color: #3d3b86;
+	color: white;
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.hireme-btn:hover{
+	background-color: rgba(61,59,134, 0.90);
+}
+ .card-img-top {
+            width: 100%;
+            height: 200px; /* Set the desired height */
+            object-fit: cover; /* This will preserve the aspect ratio of the images */
+            border: solid 2px;
+            border-radius: 4px;
+        }
+      .school{
+      	padding: 10px;
+      }
+
+
+

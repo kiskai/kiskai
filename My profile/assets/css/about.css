@@ -1,0 +1,78 @@
+
+
+#meMyself{
+  background-color: #9E9DC2;
+}
+.contian-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about-container{
+  padding: 7% 15% 3% 15%;
+  display: block;
+
+}
+.about-section{
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bolder;
+  margin: 0 0 10px 0;
+}
+.education-section{
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bolder;
+  margin: 0 0 20px 0;
+}
+.achivement-section{
+  display: flex;
+  font-weight: bolder;
+  margin: 10px 0 20px 0;
+  justify-content: flex-start;
+
+}
+.aboutMe-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px  #504E92;
+    margin: 0 auto 20px;
+}
+p{
+  padding: 0 10px 0 10px;
+}
+.name{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.line-border{
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bolder;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    border-bottom: 4px solid #504E92;
+    animation: expand 2s ease-in-out forwards;
+    transform-origin: center;
+    box-shadow: 10px 10px 5px   #D0CFE1;
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
