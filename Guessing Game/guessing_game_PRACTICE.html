@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('numbers.avif');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+input[type="text"], button{
+    border: none;
+    padding: 10px;
+    width: 250px;
+    box-sizing: border-box;
+}
+button{
+    background-color: rgb(113, 192, 113, 0.3);
+    color: white;
+    transition: 0.5s;
+    
+}
+button:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(113, 192, 113,);
+    color: white;
+    margin: 0 40px 0 80px;
+    width: 100px;
+
+}
+p, label{
+    color: white;
+}
+p{
+    text-align: center;
+}
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+</style>
+<body>
+
+    <div class="center">
+        <h1>Guessing Game: Guess A Number!</h1>
+        <div class="container">
+            <label for="number">Enter a number:</label>
+            <input type="text" id="number" placeholder="Guess a number between 1-10">
+            <button type="submit" id="submitGuess">Guess</button>
+        </div>
+
+        <div class="message">
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        // get the element of Message (p) and the submit btn
+        let message = document.getElementById("message");
+        let submitGuess = document.getElementById("submitGuess");
+
+        // declared min and max numbers for guessing
+        const min = 1;
+        const max = 10;
+
+        // generates random number
+        const answer = Math.floor(Math.random() * (max - min + 1) + min);
+        // store the number of attempts
+        let attempts = 0;
+
+        // run the program until this turns to false
+        let run = true;
+    
+    submitGuess.onclick = function(){
+        // if run is true then execute the code
+        if(run){
+            // gets the value of the user inputed
+            let number = document.getElementById("number").value;
+            // converts the value that the user inputed into a NUMBER
+            number = Number(number);
+
+            // isNan -  to check if the value of the number is NOT a number
+            if(isNaN(number)){
+                message.textContent = "Please enter a valid number!";
+            }
+            // if the number is less than or greater than the min or max then,
+            else if(number < min  || number > max){
+                // it will execute/display this
+                message.textContent = "Please enter a valid number!!!";
+            }else{
+                // increment the attempts by one
+                attempts++;
+                // if the number is less than the answer then, 
+                if(number < answer){
+                    // it will display this
+                    message.textContent = "Too low! Please try agian!";
+                }
+                // else if, the number is greater than the answe then,
+                else if(number > answer){
+                    // it will display this
+                    message.textContent = "Too high! Please try agian!";
+                }
+                // if the user got the correct answer, it will execite this else statement
+                else{
+                   message.textContent = "Congratulations!, you guessed the correct answer, " + answer + " after, " + attempts + " attempts";
+                   // then set the run to false to stop the program
+                   run = false;
+                }
+            }
+        }
+    }
+    </script>
+    
+</body>
+</html>
